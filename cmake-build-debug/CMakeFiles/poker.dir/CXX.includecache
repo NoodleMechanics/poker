@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
+iostream
+-
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Game.cpp
+Game.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Game.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Game.h
+vector
+-
+PlayerType.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/PlayerType.h
+Card.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/PlayerType.h
+
