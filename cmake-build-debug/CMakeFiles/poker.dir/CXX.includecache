@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.h
+Player.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/BetHistory.h
+vector
+-
+Bet.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
+
 /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
 iostream
 -
@@ -21,6 +33,32 @@ PlayerType.h
 /Users/gdigrego/School/Spring19/CSCI477/poker/src/PlayerType.h
 Card.h
 /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
+Player.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
+HumanPlayer.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.h
+AlphaPlayer.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h
+vector
+-
+Card.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.cpp
+HumanPlayer.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.h
+Player.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
+
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
+Hand.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h
+BetHistory.h
+/Users/gdigrego/School/Spring19/CSCI477/poker/src/BetHistory.h
 
 /Users/gdigrego/School/Spring19/CSCI477/poker/src/PlayerType.h
 

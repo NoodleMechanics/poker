@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/AlphaPlayer.o: src/AlphaPlayer.cpp.o
+
+.PHONY : src/AlphaPlayer.o
+
+# target to build an object file
+src/AlphaPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/src/AlphaPlayer.cpp.o
+.PHONY : src/AlphaPlayer.cpp.o
+
+src/AlphaPlayer.i: src/AlphaPlayer.cpp.i
+
+.PHONY : src/AlphaPlayer.i
+
+# target to preprocess a source file
+src/AlphaPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/src/AlphaPlayer.cpp.i
+.PHONY : src/AlphaPlayer.cpp.i
+
+src/AlphaPlayer.s: src/AlphaPlayer.cpp.s
+
+.PHONY : src/AlphaPlayer.s
+
+# target to generate assembly for a file
+src/AlphaPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/src/AlphaPlayer.cpp.s
+.PHONY : src/AlphaPlayer.cpp.s
+
 src/Bet.o: src/Bet.cpp.o
 
 .PHONY : src/Bet.o
@@ -285,6 +312,33 @@ src/Hand.cpp.s:
 	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/src/Hand.cpp.s
 .PHONY : src/Hand.cpp.s
 
+src/HumanPlayer.o: src/HumanPlayer.cpp.o
+
+.PHONY : src/HumanPlayer.o
+
+# target to build an object file
+src/HumanPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/src/HumanPlayer.cpp.o
+.PHONY : src/HumanPlayer.cpp.o
+
+src/HumanPlayer.i: src/HumanPlayer.cpp.i
+
+.PHONY : src/HumanPlayer.i
+
+# target to preprocess a source file
+src/HumanPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/src/HumanPlayer.cpp.i
+.PHONY : src/HumanPlayer.cpp.i
+
+src/HumanPlayer.s: src/HumanPlayer.cpp.s
+
+.PHONY : src/HumanPlayer.s
+
+# target to generate assembly for a file
+src/HumanPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/poker.dir/build.make CMakeFiles/poker.dir/src/HumanPlayer.cpp.s
+.PHONY : src/HumanPlayer.cpp.s
+
 src/Player.o: src/Player.cpp.o
 
 .PHONY : src/Player.o
@@ -324,6 +378,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/AlphaPlayer.o"
+	@echo "... src/AlphaPlayer.i"
+	@echo "... src/AlphaPlayer.s"
 	@echo "... src/Bet.o"
 	@echo "... src/Bet.i"
 	@echo "... src/Bet.s"
@@ -339,6 +396,9 @@ help:
 	@echo "... src/Hand.o"
 	@echo "... src/Hand.i"
 	@echo "... src/Hand.s"
+	@echo "... src/HumanPlayer.o"
+	@echo "... src/HumanPlayer.i"
+	@echo "... src/HumanPlayer.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"

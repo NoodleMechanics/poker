@@ -83,6 +83,12 @@
 		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/main.cpp">
 			<Option target="poker"/>
 		</Unit>
+		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.cpp">
+			<Option target="poker"/>
+		</Unit>
+		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.h">
+			<Option target="poker"/>
+		</Unit>
 		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.cpp">
 			<Option target="poker"/>
 		</Unit>
@@ -111,6 +117,12 @@
 			<Option target="poker"/>
 		</Unit>
 		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h">
+			<Option target="poker"/>
+		</Unit>
+		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.cpp">
+			<Option target="poker"/>
+		</Unit>
+		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.h">
 			<Option target="poker"/>
 		</Unit>
 		<Unit filename="/Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.cpp">

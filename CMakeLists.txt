@@ -3,4 +3,4 @@ project(poker)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(poker main.cpp src/Card.cpp src/Card.h src/Bet.cpp src/Bet.h src/Game.cpp src/Game.h src/PlayerType.h src/Hand.cpp src/Hand.h src/BetHistory.cpp src/BetHistory.h src/Player.cpp src/Player.h)
+add_executable(poker main.cpp src/Card.cpp src/Card.h src/Bet.cpp src/Bet.h src/Game.cpp src/Game.h src/PlayerType.h src/Hand.cpp src/Hand.h src/BetHistory.cpp src/BetHistory.h src/Player.cpp src/Player.h src/HumanPlayer.cpp src/HumanPlayer.h src/AlphaPlayer.cpp src/AlphaPlayer.h)

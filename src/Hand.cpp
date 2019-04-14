@@ -21,9 +21,21 @@ Card Hand::getCard(int n) {
 }
 
 Hand Hand::getVisable() {
-	// stub
+	Hand h;
+	for(auto &i: hand) {
+		if(i.isFaceUp()) {
+			h.addCard(i);
+		}
+	}
+
+	return h;
 }
 
 int Hand::evaluate() {
-	// stub
+	int total = 0;
+	for(auto &i: hand) {
+		total += i.getValue();
+	}
+
+	return total;
 }

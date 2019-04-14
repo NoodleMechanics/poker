@@ -12,9 +12,15 @@ int main() {
 	// start game
 	Game g;
 
-	g.createDeck();
-	g.printDeck();
 	g.playGame(HUMAN, ALPHA, pChips0, pChips1, flag);
+
+	if(pChips0 > pChips1) {
+		printf("Player 0 Wins!\n");
+	} else if(pChips0 < pChips1) {
+		printf("Player 1 Wins!\n");
+	} else {
+		printf("Game is a Draw\n");
+	}
 
 	return 0;
 }

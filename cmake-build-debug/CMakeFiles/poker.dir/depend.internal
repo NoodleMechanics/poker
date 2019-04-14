@@ -3,9 +3,23 @@
 
 CMakeFiles/poker.dir/main.cpp.o
  /Users/gdigrego/School/Spring19/CSCI477/poker/main.cpp
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/BetHistory.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Game.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/PlayerType.h
+CMakeFiles/poker.dir/src/AlphaPlayer.cpp.o
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.cpp
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/BetHistory.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
 CMakeFiles/poker.dir/src/Bet.cpp.o
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.cpp
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
@@ -17,14 +31,28 @@ CMakeFiles/poker.dir/src/Card.cpp.o
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.cpp
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
 CMakeFiles/poker.dir/src/Game.cpp.o
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/AlphaPlayer.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/BetHistory.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Game.cpp
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Game.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/PlayerType.h
 CMakeFiles/poker.dir/src/Hand.cpp.o
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.cpp
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h
+CMakeFiles/poker.dir/src/HumanPlayer.cpp.o
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/BetHistory.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Card.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Hand.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.cpp
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/HumanPlayer.h
+ /Users/gdigrego/School/Spring19/CSCI477/poker/src/Player.h
 CMakeFiles/poker.dir/src/Player.cpp.o
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/Bet.h
  /Users/gdigrego/School/Spring19/CSCI477/poker/src/BetHistory.h
