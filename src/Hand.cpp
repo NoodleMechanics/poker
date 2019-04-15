@@ -39,3 +39,9 @@ int Hand::evaluate() {
 
 	return total;
 }
+
+void Hand::show() {
+	for(auto &i: hand) {
+		i.setFaceUp(true);
+	}
+}

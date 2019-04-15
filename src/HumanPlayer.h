@@ -11,7 +11,7 @@ public:
 	HumanPlayer();
 	HumanPlayer(int pId, int &pChips);
 
-	int getBet(Hand opponent, BetHistory bh, int bet2Player, bool canRaise, int pot) override; //// This is abstract
+	int getBet(Hand opponent, BetHistory &bh, int bet2Player, bool canRaise, int &pot) override; //// This is abstract
 
 };
 

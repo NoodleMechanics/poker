@@ -12,7 +12,7 @@ HumanPlayer::HumanPlayer(int pId, int &pChips) {
 }
 
 
-int HumanPlayer::getBet(Hand opponent, BetHistory bh, int bet2Player, bool canRaise, int pot) {
+int HumanPlayer::getBet(Hand opponent, BetHistory &bh, int bet2Player, bool canRaise, int &pot) {
 	int betValue = 0;
 	Hand oHand = opponent.getVisable();
 
@@ -25,10 +25,23 @@ int HumanPlayer::getBet(Hand opponent, BetHistory bh, int bet2Player, bool canRa
 	for(int i = 0; i < oHand.getCount(); i++) {
 		printf("%s ", oHand.getCard(i).getName().c_str());
 	}
-	printf("\n");
+	printf("\nThe pot is: %i\n", pot);
 
-	printf("Enter amount to bet (enter 0 for check): ");
-	std::cin >> betValue;
+	do{
+		if(bet2Player == 0) {
+			printf("Enter amount between 1-10 to bet or enter 0 to check: ");
+		} else {
+			printf("Enter %i to call, -10 to fold, or amount between %i-%i to raise: ", bet2Player, bet2Player + 1, bet2Player + 10);
+		}
+		std::cin >> betValue;
+	} while(betValue != -1 && !checkBet(betValue, bet2Player));
+
+	if(betValue > 0) {
+		chips -= betValue;
+		pot += betValue;
+
+		bh.addBet(Bet(betValue, id));
+	}
 
 	return betValue;
 }

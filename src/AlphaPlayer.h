@@ -11,7 +11,7 @@ public:
 	AlphaPlayer();
 	AlphaPlayer(int pId, int &pChips);
 
-	int getBet(Hand opponent, BetHistory bh, int bet2Player, bool canRaise, int pot) override;
+	int getBet(Hand opponent, BetHistory &bh, int bet2Player, bool canRaise, int &pot) override;
 };
 
 

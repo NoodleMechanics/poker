@@ -19,13 +19,13 @@ public:
 	Player();
 	Player(int pId, int &pChips);
 
-	virtual int getBet(Hand opponent, BetHistory bh, int bet2Player, bool canRaise, int pot); //// This is abstract
+	virtual int getBet(Hand opponent, BetHistory &bh, int bet2Player, bool canRaise, int &pot); //// This is abstract
 	int getId();
 	void clearHand();
 	void dealCard(Card c);
 	Hand getHand();
 	void addChips(int num); // add or sub chips from player
 	int getChips();
-
-
+	bool checkBet(int value, int bet2Player);
+	void showHand();
 };

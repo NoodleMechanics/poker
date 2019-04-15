@@ -4,22 +4,26 @@
 
 #include "Game.h"
 
-bool Game::playGame(PlayerType p0, PlayerType p1, int &chips0, int &chips1, bool reportFlag){
+bool Game::playGame(PlayerType p0, PlayerType p1, int &chips0, int &chips1, bool reportFlag) {
 	// create the two players
 	HumanPlayer player0;
 	AlphaPlayer player1;
 	BetHistory bh;
+	int pot = 0;
 
-	if(p0 == HUMAN)
+	if (p0 == HUMAN)
 		player0 = HumanPlayer(0, chips0);
 
-	if(p1 == ALPHA)
+	if (p1 == ALPHA)
 		player1 = AlphaPlayer(0, chips1);
 
 	// run game for 20 hands
-	//for(int i = 0; i < 20; i++) {
+	for (int i = 0; i < 20; i++) {
 		createDeck();
-		int pot = 0;
+		int currentBet = 0;
+
+		player0.clearHand();
+		player1.clearHand();
 
 		// shuffle deck
 		shuffleDeck(30);
@@ -39,7 +43,7 @@ bool Game::playGame(PlayerType p0, PlayerType p1, int &chips0, int &chips1, bool
 		deck.pop_back();
 
 		// deal rest of starting cards two up each
-		for(int j = 0; j < 2; j++) {
+		for (int j = 0; j < 2; j++) {
 			deck.back().setFaceUp(true);
 			player0.dealCard(deck.back());
 			deck.pop_back();
@@ -51,20 +55,146 @@ bool Game::playGame(PlayerType p0, PlayerType p1, int &chips0, int &chips1, bool
 
 		// first betting round (player1 starts)
 		printf("\nFIRST BETTING ROUND\n\n");
-		player0.getBet(player1.getHand(), bh, 0, true, pot);
 
-	//}
+		int count = 0;
+		do {
+			if (count == 3)
+				break;
+			currentBet = player0.getBet(player1.getHand(), bh, currentBet, true, pot);
+			if (currentBet == -1)
+				return true; //// exit if player wants
+			else if (currentBet == -10)
+				break;
+			currentBet = player1.getBet(player0.getHand(), bh, currentBet, true, pot);
+			if (currentBet == -1)
+				break;
+			count++;
+			printf("\n");
+		} while (currentBet != 0);
+
+		if (currentBet == -1) {
+			// player 1 folded (end hand)
+			printf("You won the hand! The pot was %i \n", pot);
+			chips0 += pot;
+			continue;
+		} else if (currentBet == -10) {
+			// player 0 folded (end hand)
+			printf("You lost the hand! The pot was %i \n", pot);
+			chips1 += pot;
+			continue;
+		}
+		bh.clearHistory(); //// clear for each round???
+
+		//// Deal next cards
+		deck.back().setFaceUp(true);
+		player0.dealCard(deck.back());
+		deck.pop_back();
+
+		deck.back().setFaceUp(true);
+		player1.dealCard(deck.back());
+		deck.pop_back();
+
+		printf("SECOND BETTING ROUND\n\n");
+
+		count = 0;
+		do {
+			if (count == 3)
+				break;
+			currentBet = player1.getBet(player0.getHand(), bh, currentBet, true, pot);
+			if (currentBet == -1)
+				break;
+			currentBet = player0.getBet(player1.getHand(), bh, currentBet, true, pot);
+			if (currentBet == -1)
+				return true; //// exit if player wants
+			else if (currentBet == -10)
+				break;
+			count++;
+			printf("\n");
+		} while (currentBet != 0);
+
+		if (currentBet == -1) {
+			// player 1 folded (end hand)
+			printf("You won the hand! The pot was %i \n", pot);
+			chips0 += pot;
+			continue;
+		} else if (currentBet == -10) {
+			// player 0 folded (end hand)
+			printf("You lost the hand! The pot was %i \n", pot);
+			chips1 += pot;
+			continue;
+		}
+		bh.clearHistory();
+
+		deck.back().setFaceUp(true);
+		player0.dealCard(deck.back());
+		deck.pop_back();
+
+		deck.back().setFaceUp(true);
+		player1.dealCard(deck.back());
+		deck.pop_back();
+
+		printf("THIRD BETTING ROUND\n\n");
+
+		count = 0;
+		do {
+			if (count == 3)
+				break;
+			currentBet = player1.getBet(player0.getHand(), bh, currentBet, true, pot);
+			if (currentBet == -1)
+				break;
+			currentBet = player0.getBet(player1.getHand(), bh, currentBet, true, pot);
+			if (currentBet == -1)
+				return true; //// exit if player wants
+			else if (currentBet == -10)
+				break;
+			count++;
+			printf("\n");
+		} while (currentBet != 0);
+
+		if (currentBet == -1) {
+			// player 1 folded (end hand)
+			printf("You won the hand! The pot was %i \n", pot);
+			chips0 += pot;
+			continue;
+		} else if (currentBet == -10) {
+			// player 0 folded (end hand)
+			printf("You lost the hand! The pot was %i \n", pot);
+			chips1 += pot;
+			continue;
+		}
+		bh.clearHistory();
+
+		printf("\n\n\nPlayer0 shows: ");
+		player0.showHand();
+		printf("Player0 hand value: %i\n", player0.getHand().evaluate());
+
+		printf("player1 shows: ");
+		player1.showHand();
+		printf("Player1 hand value: %i\n", player1.getHand().evaluate());
+
+		int pH0 = player0.getHand().evaluate(), pH1 = player1.getHand().evaluate();
+		if(pH0 > pH1) {
+			// p0 wins
+			printf("Player0 wins! Pot was: %i\n", pot);
+			player0.addChips(pot);
+			pot = 0;
+		} else if(pH0 < pH1) {
+			// p1 wins
+			printf("Player1 wins! Pot was: %i\n", pot);
+			player1.addChips(pot);
+			pot = 0;
+		} else {
+			printf("Hand is a tie!\n");
+		}
+
+	}
 
 	return true;
 }
 
-// Plays a game between a player of type p0 and p1. Chips is the number of chips each player
-//respectively has at start and end of the game. reportFlag is just a flag to turn on and off I/O
-//within the game (so you can do Monte Carlo runs without a lot of output). The method returns
-//true if someone wants to quit the program.
-
-
 void Game::createDeck() {
+	deck.clear();
+
 	for(int j = 0; j < 4; j++) {
 		for(int i = 1; i <= 13; i++) {
 			if(i == 1) {

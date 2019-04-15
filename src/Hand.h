@@ -19,7 +19,7 @@ public:
 	Card getCard(int n);
 	Hand getVisable();
 	int evaluate();
-
+	void show();
 };
 
 
